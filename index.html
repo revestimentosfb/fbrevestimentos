@@ -14,7 +14,7 @@
     body { font-family:'Poppins',sans-serif; background:#df0029; color:#fff; line-height:1.7; }
     a { text-decoration:none; }
 
-    .container { max-width:1200px; margin:auto; padding:70px 20px; }
+    .container { max-width:1200px; margin:auto; padding:60px 20px; }
 
     header { background:linear-gradient(135deg,#df0028,#b60724); text-align:center; padding:110px 20px; }
     header img { max-width:380px; margin-bottom:25px; }
@@ -27,34 +27,46 @@
     section h2 { text-align:center; font-size:2.3rem; margin-bottom:25px; }
     section h3 { text-align:center; font-size:1.4rem; margin-bottom:20px; }
 
-    .intro { text-align:center; max-width:900px; margin:0 auto 40px; color:#f1f1f1; }
+    .intro { text-align:center; max-width:900px; margin:0 auto 15px; color:#f1f1f1; }
 
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; }
 
-    .card { background:#161616; padding:35px 28px; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.4); display:flex; flex-direction:column; align-items:center; text-align:center; gap:15px; height:100%; }
+    .card { 
+        background:#161616;
+        padding:35px 28px;
+        border-radius:18px;  
+        box-shadow:0 10px 30px rgba(0,0,0,.4); 
+        display:flex; 
+        flex-direction:column; 
+        align-items:center; 
+        text-align:center; 
+        gap:15px; 
+        height:100%; }
 
-    .card i { color:#df0024; font-size:28px; }
+    .card i { 
+        color:#f8f400; 
+        font-size:30px; }
     .card h3 { font-size:1.35rem; font-weight:600; }
-    .card p { font-size:1rem; color:#ccc; line-height:1.6; }
+    .card p { font-size:1rem; color:#ccc; line-height:1.4; }
 
     .list { text-align:left; color:#ddd; margin-top:10px; }
     .list li { margin-bottom:8px; }
 
-    .cta { background:linear-gradient(135deg,#df0029,#df0021); color:#fff; text-align:center; padding:90px 20px; border-radius:25px; }
-    .cta p { margin:20px 0 35px; font-size:1.1rem; color:#f2f2f2; }
+    .cta { background:linear-gradient(135deg,#df0029,#df0021); color:#fff; text-align:center; padding:5px 5px; border-radius:25px; }
+    .cta p { margin:20px 0 35px; font-size:1.5rem; color:#f2f2f2; }
 
     .portfolio-video {
-  width: 100%;
+   width: 100%;
   border-radius: 14px;
   object-fit: cover;
-  max-height: 220px;
+  max-height: 300px;
 }
 
     footer { background:#000; text-align:center; padding:45px 20px; color:#888; font-size:.9rem; }
     footer p { margin-bottom:8px; }
   
     /* ===== ANIMAÇÕES AO ROLAR ===== */
-    .reveal { opacity:0; transform:translateY(30px); transition:all .8s ease; }
+    .reveal { opacity:1; transform:translateY(30px); transition:all .8s ease; }
     .reveal.active { opacity:1; transform:translateY(0); }
 
     /* ===== AJUSTES MOBILE ===== */
@@ -89,7 +101,7 @@
 
 <header class="reveal">
   <img src="imgs/logo.png" alt="FB Revestimentos Logo">
-  <h1>Proteção e Estética Automotiva</h1>
+  <h1>Proteção, Qualidade e Conforto</h1>
   <p>Automotive Care • Películas • PPF • Acabamento Premium</p>
   <a class="btn" href="https://wa.me/5583988090971" onclick="fbq('track','Contact');" target="_blank"><i class="fab fa-whatsapp"></i> Solicitar Orçamento</a>
 </header>
@@ -162,6 +174,45 @@
 </section>
 
 <section class="container reveal">
+  <h2>Redes Sociais</h2>
+  <p class="intro">
+    Acompanhe nosso dia a dia, trabalhos realizados e novidades nas redes sociais.
+  </p>
+
+  <div class="grid">
+    <a class="card social-card" 
+       href="https://www.instagram.com/SEU_INSTAGRAM" 
+       target="_blank"
+       onclick="fbq('track','ViewContent');">
+
+      <i class="fa-brands fa-instagram"></i>
+      <h3>Instagram</h3>
+      <p>Vídeos reais de aplicação, resultados e bastidores.</p>
+    </a>
+
+    <a class="card social-card" 
+       href="https://www.facebook.com/SUA_PAGINA" 
+       target="_blank"
+       onclick="fbq('track','ViewContent');">
+
+      <i class="fa-brands fa-facebook"></i>
+      <h3>Facebook</h3>
+      <p>Avaliações de clientes, novidades e conteúdos exclusivos.</p>
+    </a>
+
+    <a class="card social-card" 
+       href="https://wa.me/5583988090971" 
+       target="_blank"
+       onclick="fbq('track','Contact');">
+
+      <i class="fa-brands fa-whatsapp"></i>
+      <h3>WhatsApp</h3>
+      <p>Atendimento direto para orçamentos e dúvidas.</p>
+    </a>
+  </div>
+</section>
+
+<section class="container reveal">
   <div class="cta">
     <h2>Seu veículo merece cuidado profissional</h2>
     <p>Solicite agora uma avaliação gratuita e conheça o padrão FB Revestimentos.</p>
@@ -174,7 +225,7 @@
   <p class="intro">Confira alguns serviços realizados pela FB Revestimentos e o padrão de acabamento que entregamos.</p>
   <div class="grid">
     <div class="card">
-      <p>PPF aplicado</p>
+      <p><strong>PPF aplicado</strong></p>
        <video class="portfolio-video" autoplay muted loop playsinline>
       <source src="videos/1.mp4" type="video/mp4">
       Seu navegador não suporta vídeo.
@@ -183,7 +234,12 @@
       <p>Aplicação de <strong>PPF Regenerativo</strong> em área frontal.</p>
     </div>
     <div class="card">
-      <img src="imgs/portfolio2.jpg" alt="Película automotiva" style="width:100%; border-radius:14px;">
+      <p><strong>Película Automotiva</strong></p>
+      <video class="portfolio-video" autoplay muted loop playsinline>
+      <source src="videos/2.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+      </video>
+      <!-- <img src="imgs/portfolio2.jpg" alt="Película automotiva" style="width:100%; border-radius:14px;"> -->
       <p>Instalação de <strong>película automotiva</strong> com controle solar.</p>
     </div>
     <div class="card">
